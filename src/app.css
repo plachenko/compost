@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+html,
+body {
+    height: 100%;
+    overscroll-behavior: none;
+}
+
+@layer base {
+    button {
+        @apply enabled:hover:bg-blue-700 bg-blue-500 text-white font-bold py-2 px-4 rounded cursor-pointer;
+    }
+
+    button:disabled {
+        @apply opacity-50 cursor-default;
+    }
+
+    input,
+    textarea {
+        @apply border border-gray-300 rounded p-2 w-full;
+    }
+}
